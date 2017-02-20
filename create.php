@@ -18,6 +18,8 @@ session_start();
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+        <h2 align="center">写一篇新的Blog<br><br></h2>
         <title>新建一个博客</title>
     </head>
     <body>
@@ -31,7 +33,7 @@ session_start();
                         <textarea class="form-control" placeholder="在此输入详情" name="content"> </textarea>   
                     </div>
                     <div>
-                        <input type="submit" value="save" name="action">
+                        <input type="submit" value="save" name="action" class="btn btn-success">
                     </div>
 
                 </table>

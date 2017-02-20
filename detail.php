@@ -39,6 +39,8 @@ if(@substr($_POST['action'], 0, 3) === 'DEL'){
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+        <h2 align="center">查看您的Blog</h2>
         <title>查看您的blog</title>
     </head>
     <body>
@@ -49,11 +51,11 @@ if(@substr($_POST['action'], 0, 3) === 'DEL'){
                     <h2><?php echo $things['title']; ?></h2>
                 </td>
                 <div>
-                        <a href="edit.php?id=<?php echo $things['id'];?>"><button>编辑</button></a>
+                        <a href="edit.php?id=<?php echo $things['id'];?>"><button class="btn btn-default">编辑</button></a>
                 </div>
                 <td>
                     <form action="detail.php" method="POST">
-                        <input type="submit" value="DEL-<?php echo $things['id'];?>" name="action">
+                        <input class="btn btn-danger" type="submit" value="DEL-<?php echo $things['id'];?>" name="action">
                     </form>
                 </td>
 
@@ -63,8 +65,8 @@ if(@substr($_POST['action'], 0, 3) === 'DEL'){
             </tr>
           <?php } ?>
         </div>
-        <div>
-            <a href="index.php"><button>返回主页</button></a>
+        <div align="right">
+            <a href="index.php"><button class="btn btn-default">返回主页</button></a>
         </div>
 
         

@@ -40,8 +40,9 @@ if(@$_POST['action'] == "save"){
 <html>
 <head>
     <meta charset="utf-8">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <title>MY blog</title>
-    <h1>欢迎使用MY blog</h1>
+    <h1 align="center">欢迎使用MY blog</h1>
 </head>
 <body>
     <form action="index.php" method="GET">
@@ -49,15 +50,15 @@ if(@$_POST['action'] == "save"){
         <tr>
             <td></td>
             <td>
-                <input type="submit" value="logout" name="action">
+                <input type="submit" value="logout" name="action" class="btn btn-danger">
             </td>
         </tr>
         </table>
     </form>
-    <div>
-        <a href="detail.php">查看您的博客</a>
-        <a href="create.php">写一篇新博客</a>
-        <a href="all.php">浏览全部的博客</a>
+    <div class="container align="center">
+        <a href="detail.php"><button class="btn btn-default">查看您的博客</button></a>
+        <a href="create.php"><button class="btn btn-default">写一篇新博客</button></a>
+        <a href="all.php"><button class="btn btn-default">浏览全部的博客</button></a>
     </div>
 
 </body>

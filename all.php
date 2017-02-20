@@ -33,6 +33,7 @@ $article = $sql->fetchall(PDO::FETCH_ASSOC);
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
         <title>所有博客</title>
     </head>
     <body>
@@ -43,7 +44,7 @@ $article = $sql->fetchall(PDO::FETCH_ASSOC);
                     <h2><?php echo $things['title']; ?></h2>
                 </td>
                 <div>
-                        <a href="glance.php?id=<?php echo $things['id'];?>"><button>查看详情</button></a>
+                        <a href="glance.php?id=<?php echo $things['id'];?>"><button class="btn btn-default">查看详情</button></a>
                         <p>作者：<?php echo $things['created_user'] ?></p>
                 </div>
                 <td></td>

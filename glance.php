@@ -51,6 +51,7 @@ if(@isset($_POST['action'])){
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
         <title>查看博客</title>
     </head>
     <body>
@@ -62,6 +63,7 @@ if(@isset($_POST['action'])){
             <pre><?php echo $article['content'] ?></pre>
         </div>
         <div class="container">
+            <h3>所有评论</h3>
             <?php foreach ($comment as $things) { ?>
             <tr>
                 <td>
@@ -72,7 +74,7 @@ if(@isset($_POST['action'])){
             </tr>
             <?php } ?>
                 <div>
-                    <h2>评论区：</h2>
+                    <h3>评论区：</h3>
                     <form action="glance.php?id=<?php echo $id ?>" method="POST">
                         <input style="display:none;" name="id" value="<?php echo $id; ?>">
                         <textarea class="form-control" placeholder="在此输入您的评论" name="content"></textarea>
